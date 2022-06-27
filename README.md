@@ -42,7 +42,7 @@ ORM: Prisma.
 DB: Postgres.
 
 
-#Json Schema:
+# Json Schema:
 
 <img width="766" alt="Screen Shot 1443-11-26 at 6 18 34 PM 3" src="https://user-images.githubusercontent.com/103120574/176056296-19e42a6c-86e5-4dc6-a5f4-44d5e452851c.png">
 

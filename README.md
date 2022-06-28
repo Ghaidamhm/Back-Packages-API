@@ -10,28 +10,28 @@ Developers are building the future every day, you can explore their stories and 
 
 ## Admin's features:
 
-CRUD All Packages.
-Accept/Cancel Membership.
-Show User'sInformation.
-Tag Expert users.
+- CRUD All Packages.
+- Accept/Cancel Membership.
+- Show User'sInformation.
+- Tag Expert users.
 
 ## User's features:
 
-CRUD their OWN Packages.
-Rate other user's package.
-View all user's packages.
-Search package by name.
-Share Recommended Packages.
-Share Own Projects.
-collaboration on project with Other users.
-Asks and Answers other user's Questions.
+- CRUD their OWN Packages.
+- Rate other user's package.
+- View all user's packages.
+- Search package by name.
+- Share Recommended Packages.
+- Share Own Projects.
+- collaboration on project with Other users.
+- Asks and Answers other user's Questions.
 
 ## profile's features:
 
-CRUD user's Own information.
-Display user's list packages.
-Display Latest package created.
-Display Recommended package.
+- CRUD user's Own information.
+- Display user's list packages.
+- Display Latest package created.
+- Display Recommended package.
 
 # Stack
 

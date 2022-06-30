@@ -11,7 +11,7 @@ Developers are building the future every day, you can explore their stories and 
 ## Admin's features:
 
 - CRUD All Packages.
-- Accept/Cancel Membership.
+- Cancel Membership.
 - Show User'sInformation.
 - Tag Expert users.
 

@@ -35,11 +35,11 @@ Developers are building the future every day, you can explore their stories and 
 
 # Stack
 
-Runtime Environment: Node.js.
-Language: TypeScript.
-Web Server: Fastify.
-ORM: Prisma.
-DB: Postgres.
+- Runtime Environment: Node.js.
+- Language: TypeScript.
+- Web Server: Fastify.
+- ORM: Prisma.
+- DB: Postgres.
 
 
 # Json Schema:

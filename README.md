@@ -41,3 +41,7 @@ DB: Postgres.
 Json Schema:
 
 Screen Shot 1443-11-26 at 6 18 34 PM
+
+
+#heroku deployment:
+https://ghaida-alsaif.herokuapp.com/docs/static/index.html

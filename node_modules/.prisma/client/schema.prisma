@@ -1,0 +1,109 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mongodb"
+  url      = env("DATABASE_URL")
+}
+
+//Admin schema
+model Admin {
+  admin_id String    @id @default(auto()) @map("_id") @db.ObjectId
+  email    String    @unique
+  name     String
+  password String
+  role     Role      @default(ADMIN)
+  //tagUser  TagUser[]
+ // packages Package[]
+
+ // profiles Profile[]
+  // User        User?   @relation(fields: [userUser_id], references: [user_id])
+  // userUser_id String? @db.ObjectId
+   @@map("admins")
+}
+enum TagUser {
+  expert
+  mid
+  entry
+  student
+}
+//user schema
+model User {
+  user_id  String    @id @default(auto()) @map("_id") @db.ObjectId
+  email    String    @unique
+  name     String
+  password String
+
+  role     Role    @default(USER)
+  //tagUser  TagUser[]
+  //profiles Profile[]
+  packages Package[]
+  comment  Comment[]
+ // admin    Admin[]
+
+  @@map("users")
+}
+
+enum Role {
+  USER
+  ADMIN
+}
+
+//package schema
+model Package {
+  package_id          String    @id @default(auto()) @map("_id") @db.ObjectId
+  name                String?
+  package_description String?
+ // createAt   DateTime  @default(now())
+  //updateAt   DateTime  @updatedAt
+  comments            Comment[]
+                
+ // rating              Rating[]
+  // Admin    Admin?  @relation(fields: [admin_id], references: [admin_id])
+  // admin_id String? @db.ObjectId
+
+  User    User?   @relation(fields: [user_id], references: [user_id])
+  user_id String? @db.ObjectId
+
+  @@map("packages")
+}
+enum Rating {
+  excellent
+  good
+  poor
+}
+
+
+//profile schema
+model Profile {
+  profile_id String @id @default(auto()) @map("_id") @db.ObjectId
+  first_name String
+  last_name  String
+
+  // User        User?   @relation(fields: [userUser_id], references: [user_id])
+  // userUser_id String? @db.ObjectId
+
+  // Admin    Admin?  @relation(fields: [admin_id], references: [admin_id])
+  // admin_id String? @db.ObjectId
+  @@map("profiles")
+}
+
+//comment schema
+model Comment {
+  comment_id String  @id @default(auto()) @map("_id") @db.ObjectId
+  content    String?
+
+
+  Package    Package? @relation(fields: [package_id], references: [package_id])
+  package_id String?  @db.ObjectId
+
+  User    User?   @relation(fields: [user_id], references: [user_id])
+  user_id String? @db.ObjectId
+
+  @@map("comments")
+}
+
